@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">  
+    <title>Document</title>
+    <style>
+        h1 {
+        color: #ff5733;
+        text-align: center;
+        }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #8b4513;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    text-align: left;
+    color: #5a5a5a;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #8b4513;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a0522d;
+}
+
+.hidden {
+    display: none;
+}
+
+p#successMessage {
+    color: #2a9d8f;
+    margin-top: 20px;
+}
+
+    
+    </style>
+</head>
+<body>
+    <!-- a = anchor -->    
+    
+   
+   
+    <form action="">
+        <br> <br> <br> <br>
+        <nav>
+            <a href="https://www.freepik.com" class="nav-link" target="_blank">Contact</a>
+            <a href="form.html"  target="_blank" class="nav-link">Register</a>
+            <a href ="product.html"  target="_blank" class="nav-link">Product</a>
+        </nav>
+
+        <h1>Coffee Shop Membership Registration</h1>
+       
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required placeholder="fullName">
+            
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="email">
+            
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Phone Number">
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required placeholder="age">
+
+        <label for="Addresss">Addresss:</label>
+        <input type="area" id="age" name="age" placeholder="Addresss">
+
+        <input type="checkbox" name="gender1" id="gender1" >
+        <label for="gender2">male</label>
+        <input type="checkbox" name="gender1" id="gender2" >
+        <label for="gender1">female</label>
+
+        <label for="favoriteDrink">Favorite Coffee Drink:</label>
+        <select id="favoriteDrink" name="favoriteDrink" required>
+            <option value="" disabled selected>-- Select One --</option>
+            <option value="espresso">Espresso</option>
+            <option value="latte">Americano</option>
+            <option value="cappuccino">Latte</option>
+            <option value="mocha">Cappuccino</option>
+            <option value="americano">Mocha</option>
+            <option value="espresso">Macchiato</option>
+            <option value="latte">Flat White</option>
+            <option value="cappuccino">Affogato</option>
+            <option value="mocha">Cold Brew</option>
+            <option value="americano"> Nitro Cold Brew</option>
+
+        </select>
+            
+    <label for="newsletter">
+        <input type="checkbox" id="newsletter" name="newsletter">
+        Subscribe to our newsletter
+    </label>
+    
+    <button type="submit">Register</button>
+    <!-- <button type="reset">Clear</button> -->
+    
+
+    
+    </form>
+    <p id="successMessage" class="hidden">Thank you for joining our coffee club!</p>
+
+
+
+
+<script>
+
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting the traditional way
+    
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+    
+        if (fullName && email && phone) {
+            document.getElementById('successMessage').classList.remove('hidden');
+            document.getElementById('registrationForm').reset();
+        } else {
+            alert('Please fill out all required fields.');
+        }
+    });
+</script>
+</body>
+
+
+</html>
+

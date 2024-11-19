@@ -1,0 +1,269 @@
+h1 {
+    color: #ff5733;
+    text-align: center;
+}
+
+a{
+    font-size : 30px;
+}
+
+#primary-link{
+    font-size : 20px;
+
+}
+.text-green{
+    color: #3c2624;
+}
+.box1{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: hsl(230, 100%, 86%);
+    border: 1px solid black;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    color: hsl(234, 100%, 90%);
+
+
+}
+.box2{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: hsl(230, 100%, 86%);
+    border: 1px solid black;
+    padding: 16px;
+    
+
+}
+.box3{
+    width: 100px;
+    height: 100px;
+    background: hsl(210, 100%, 86%)
+
+}
+.box4{
+    width: 100px;
+    height: 100px;
+    background: hsl(200, 100%, 86%)
+
+}
+.border{
+    color: black;
+    display: inline-block;
+    min-width: 12px;
+    height: 32px;
+    background-color: white;
+    border: 1px solid black;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    padding: 12px;
+    margin: 12px;
+    border-radius: 8px;
+    transition: all 0.5s;
+
+}
+
+.border:hover{
+    color: white;
+    display: inline-block;
+    min-width: 12px;
+    height: 32px;
+    border: 1px solid black;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    padding: 12px;
+    margin: 12px;
+    border-radius: 8px;
+    background-color: black;
+
+}
+
+.hide{
+    display: none;
+
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f4f8;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+.profile-container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+h1 {
+    color: #2c3e50;
+}
+.profile-info {
+    text-align: left;
+    font-size: 18px;
+    color: #555;
+    display: none;
+}
+.btn {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.btn:hover {
+    background-color: #b7898e;
+}
+/* /// */
+/* General Styling */
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8e8e8; /* เปลี่ยนสีพื้นหลัง */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #9c9191; /* เปลี่ยนเป็นสีน้ำเงิน */
+    color: #fff;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #b7898e; /* เปลี่ยนสีพื้นหลัง */
+    padding: 10px;
+}
+
+.nav-link {
+    color: #904e31; /* เปลี่ยนสีลิงก์ */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color:#904e31; /* เปลี่ยนเป็นสีน้ำเงินเข้ม */
+    color: #fff;
+}
+
+/* Profile Section */
+.profile-container {
+    margin: 0 auto; /* กึ่งกลางแนวนอน */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px; /* กำหนดขนาดสูงสุดเพื่อควบคุมขนาด */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* กำหนดความสูงเพื่อให้อยู่กลางแนวตั้ง */
+   
+}
+
+.profile-container h2 {
+    color: #0288d1; /* เปลี่ยนสีหัวข้อ */
+}
+
+.profile-info {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+    object-fit: cover;
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0288d1; /* เปลี่ยนเป็นสีน้ำเงิน */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #579ec7; /* เปลี่ยนเป็นสีน้ำเงินเข้มขึ้น */
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Table Section */
+.table-section {
+    padding: 20px;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color:#9c9191;/* เปลี่ยนสีหัวตาราง */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #dad3d5; /* สีพื้นหลังแถวตาราง */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .profile-info, .table-section table {
+        width: 100%;
+    }
+}
+
+.hidden {
+    display: none;
+}

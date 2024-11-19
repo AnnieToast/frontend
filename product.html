@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .menu-item {
+            background: #fff;
+            padding: 15px;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            
+        }
+        .menu-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover; /* ปรับขนาดของรูปให้อยู่ในกรอบโดยไม่ถูกบิดเบี้ยว */
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 20px;
+            background: #ffedcc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .cart ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .cart-item button {
+            padding: 5px;
+            border: none;
+            background-color: #ff4d4d;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .menu-item button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: #ffffff;
+        }
+        .total-price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+   
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://www.freepik.com" class="nav-link" target="_blank">Contact</a>
+        <a href="form.html"  target="_blank" class="nav-link">Register</a>
+        <a href="product.html"  target="_blank" class="nav-link">Product</a>
+    </nav>
+<h1>Our Coffee Menu</h1>
+
+<div class="menu-container" id="menuContainer">
+    <!-- รายการเมนูกาแฟจะแสดงที่นี่ -->
+</div>
+
+
+<div class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cartList"></ul>
+    <div class="total-price" id="totalPrice">Total: 0 ฿</div>
+</div>
+
+<script>
+    // ข้อมูลเมนูกาแฟ
+    const menu = [
+    { id: 1, name: 'Espresso', image: 'images/espresso.jpg', price: 50 },
+    { id: 2, name: 'Americano', image: 'images/americano.jpg', price: 60 },
+    { id: 3, name: 'Latte', image: 'images/latte.jpg', price: 70 },
+    { id: 4, name: 'Cappuccino', image: 'images/cappuccino.png', price: 75 },
+    { id: 5, name: 'Mocha', image: 'images/mocha.png', price: 80 },
+    { id: 6, name: 'Macchiato', image: 'images/macchiato.png', price: 85 },
+    { id: 7, name: 'Flat White', image: 'images/Flat White.png', price: 65 },
+    { id: 8, name: 'Affogato', image: 'images/affogato.png', price: 90 },
+    { id: 9, name: 'Cold Brew', image: 'images/Cold Brew.png', price: 70 },
+    { id: 10, name: 'Nitro Cold Brew', image: 'images/NitroColdBrew.png', price: 100 }
+];
+
+    const cart = [];
+    // ฟังก์ชันเพิ่มรายการในตะกร้า
+    function addToCart(itemId) {
+        const item = menu.find(i => i.id === itemId);
+        cart.push(item);
+        renderCart();
+    }
+
+    // ฟังก์ชันลบรายการจากตะกร้า
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        renderCart();
+    }
+
+    // ฟังก์ชันแสดงเมนู
+    function renderMenu() {
+    const menuContainer = document.getElementById("menuContainer");
+    menuContainer.innerHTML = '';
+    menu.forEach(item => {
+        const menuItem = document.createElement("div");
+        menuItem.className = "menu-item";
+        menuItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>Price: ${item.price} ฿</p>
+            <button onclick="addToCart(${item.id})">
+            <i class='fas fa-shopping-cart'></i>Add to Cart
+            </button>
+        `;
+        menuContainer.appendChild(menuItem);
+    });
+}
+    // ฟังก์ชันแสดงตะกร้าและคำนวณราคารวม
+    function renderCart() {
+        const cartList = document.getElementById("cartList");
+        cartList.innerHTML = '';
+        let totalPrice = 0;
+
+        cart.forEach((item, index) => {
+            const cartItem = document.createElement("li");
+            cartItem.className = "cart-item";
+            cartItem.innerHTML = `
+                ${item.name} - ฿${item.price} 
+                <button onclick="removeFromCart(${index})">Remove</button>
+            `;
+            cartList.appendChild(cartItem);
+            totalPrice += item.price;
+        });
+
+        document.getElementById("totalPrice").textContent = `Total: ฿${totalPrice}`;
+    }
+
+    
+
+    // เรียกใช้ฟังก์ชันแสดงเมนูเมื่อโหลดเริ่มต้น
+    document.addEventListener("DOMContentLoaded", () => {
+        renderMenu();
+    });
+</script>
+
+</body>
+</html>

@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Header Section -->
+    <header>
+        <h1 class="text-green">Hello, Welcome to My Profile</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="https://www.freepik.com" class="nav-link" target="_blank">Contact</a>
+        <a href="form.html" class="nav-link">Register</a>
+        <a href="product.html" class="nav-link">Product</a>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="profile-container">
+        <h2>My Personal Profile</h2>
+        <p class="greeting">Welcome to my personal page!</p>
+    <!-- <img src="pic5.jpg" alt="Profile Picture 2"> -->
+
+        <div class="profile-info" id="profileInfo">
+            <p><strong>Name:</strong> Supitcha Pattanakun</p>
+            <p><strong>Age:</strong> --</p>
+            <p><strong>Profession:</strong> Software Tester (QA)</p>
+            <p><strong>Hobbies:</strong> Reading, Coding, Traveling</p>
+            <p><strong>Motto:</strong> "Live life to the fullest"</p>
+            <img src="pic3.jpg" alt="Profile Picture 1" class="profile-image">
+            <img src="pic4.jpg" alt="Profile Picture 2" class="profile-image">
+        </div>
+        <button class="btn" onclick="toggleProfile()" id="toggleButton">Show Profile</button>
+    </section>
+
+    <!-- About Section -->
+  
+
+    <h1 id="title"  class="text-green">Hello World</h1>
+    <button id="hideBTN" >chang text color</button>
+    <input type="text" id="todo" placeholder="Enter something...">
+    <button id="addElement">AddElement</button>
+    <div id="results"></div>
+    <button id="clearBtn">Clear</button>
+    <button id="clearResults">clearResults</button>
+
+
+
+    <!-- Table Section -->
+    <section class="table-section">
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>สุดา</td>
+                <td>สุขใจ</td>
+                <td>suda@gmail.com</td>
+            </tr>
+            <tr>
+                <td>มณี</td>
+                <td>สุขใจ</td>
+                <td>manee@gmail.com</td>
+            </tr>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
