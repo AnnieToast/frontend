@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+
+    }
+    .flex-container{
+        display: flex;
+        /* flex-direction: column; */
+         flex-direction: row; 
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: center; 
+        height: 100vh;
+        align-items: center;
+        gap: 10px;
+        
+    }
+    .flex-item{
+        padding: 16px;
+        border: 1px solid darkslategray;
+        background-color: palevioletred;
+        min-width: 50px;
+        text-align: center;
+        padding: 8px 15px;
+        border-radius: 10px;
+       
+       
+      
+    }
+
+        /* flex-direction: row; */
+        /* flex-direction: column; */
+    .flex-item:hover {
+    background-color:#9c9191; /* เปลี่ยนเป็นสีน้ำเงินเข้ม */
+    color: #fff;
+    }
+    .feature{
+        order:-1;
+        width: 350px;
+        /* height: 150px; */
+        object-fit: cover; /* ปรับขนาดของรูปให้อยู่ในกรอบโดยไม่ถูกบิดเบี้ยว */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        
+
+
+    }
+    .feature{
+        order:-1;
+        width: 350px;
+        /* height: 150px; */
+        object-fit: cover; /* ปรับขนาดของรูปให้อยู่ในกรอบโดยไม่ถูกบิดเบี้ยว */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        
+    }
+
+    .feature button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: #ffffff;
+        }
+
+    .feature img {
+            /* width: 150px; */
+            height: 150px;
+           object-fit: cover;
+     }
+
+     img{
+         max-width: 100%;
+           
+
+     }
+     
+</style>
+<body>
+    <div class="flex-container">
+        <!-- <div class="flex-item" >ทั้งหมด</div> -->
+        <div class="flex-item feature"> 
+            <img src="images/espresso.jpg" width="100%" height="100%">
+        <div>   <h3>Product1</h3>
+            <button>Buy Now</button>
+        </div>
+        </div>
+        
+        <div class="flex-item feature">
+            <img src="images/americano.jpg" width="100%" height="100%">
+        <div>
+            <h3>Product2</h3>
+            <button>Buy Now</button>\
+        </div>
+        </div>
+
+        <div class="flex-item feature">
+            <img src="images/latte.jpg" width="100%" height="100%">
+        <div> <h3>Product3</h3>
+            <button>Buy Now</button>
+        </div>
+        </div>
+        
+        <div class="flex-item feature">
+            <img src="images/cappuccino.png" width="100%" height="100%">
+        <div><h3>Product4</h3>
+            <button>Buy Now</button>
+        </div>
+        </div>
+        
+       </div>
+        
+    </div>
+
+
+
+
+
+
+</body>
+</html>
